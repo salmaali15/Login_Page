@@ -10,7 +10,45 @@ class _MessangerScreen extends State<MessangerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              height: 35,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    backgroundImage: AssetImage("assets/spider.jpeg"),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    "Slma Tmaer",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 15,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 110,
+                  ),
+                  IconButton(
+                      onPressed: (){},
+                      icon: Icon(
+                        Icons.settings,
+                      ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Row(
